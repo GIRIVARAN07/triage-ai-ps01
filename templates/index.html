@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TriageAI | PS01</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <header>
+      <div>
+        <span class="badge">TRACK PS01</span>
+        <h1>Triage<span>AI</span></h1>
+        <p>Rule-grounded patient triage with uncertainty handling.</p>
+      </div>
+
+      <div class="status" id="status">
+        Checking system...
+      </div>
+    </header>
+
+    <main>
+
+      <!-- INPUT -->
+      <section class="panel input-panel">
+
+        <div class="section-title">
+          <div>
+            <h2>Patient description</h2>
+            <p>Enter the patient's symptoms in natural language.</p>
+          </div>
+
+          <button class="clear-btn" id="clearBtn">
+            Clear
+          </button>
+        </div>
+
+        <textarea
+          id="patientText"
+          maxlength="5000"
+          placeholder="Example: I have crushing chest pain and the pain is spreading to my left arm..."
+        ></textarea>
+
+        <div class="counter">
+          <span id="counter">0</span>/5000
+        </div>
+
+        <div class="demo-row">
+          <span>Quick demos:</span>
+
+          <button data-demo="0">
+            Chest Pain
+          </button>
+
+          <button data-demo="1">
+            Abdominal Pain
+          </button>
+
+          <button data-demo="2">
+            Breathing Emergency
+          </button>
+
+          <button data-demo="3">
+            Injury
+          </button>
+        </div>
+
+        <button class="triage-btn" id="triageBtn">
+          <span>Run Triage</span>
+          <span>→</span>
+        </button>
+
+      </section>
+
+
+      <!-- RESULT -->
+      <section class="panel result-panel">
+
+        <div class="section-title">
+          <div>
+            <h2>Triage result</h2>
+            <p>Recommendations are grounded in the supplied rules.</p>
+          </div>
+        </div>
+
+        <div id="emptyState" class="empty">
+
+          <div class="empty-icon">
+            +
+          </div>
+
+          <h3>Ready for assessment</h3>
+
+          <p>
+            Enter a patient description and run triage.
+          </p>
+
+        </div>
+
+
+        <div id="result" class="hidden">
+
+          <div class="urgency-card" id="urgencyCard">
+
+            <div>
+              <small>URGENCY</small>
+              <strong id="urgency"></strong>
+            </div>
+
+            <div class="rule-chip" id="rule"></div>
+
+          </div>
+
+
+          <div class="department">
+
+            <small>DEPARTMENT</small>
+
+            <strong id="department"></strong>
+
+          </div>
+
+
+          <div class="block">
+
+            <h3>Reasoning</h3>
+
+            <p id="reasoning"></p>
+
+          </div>
+
+
+          <div class="two-col">
+
+            <div class="block">
+
+              <h3>Knowns</h3>
+
+              <ul id="knowns"></ul>
+
+            </div>
+
+
+            <div class="block">
+
+              <h3>Unknowns</h3>
+
+              <ul id="unknowns"></ul>
+
+            </div>
+
+          </div>
+
+
+          <div class="block followup-block" id="followupBlock">
+
+            <h3>Follow-up questions</h3>
+
+            <ol id="followups"></ol>
+
+          </div>
+
+
+          <div class="action-box">
+
+            <strong>Recommended action</strong>
+
+            <p id="action"></p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer>
+      Prototype for hackathon demonstration only.
+      Not a diagnostic system.
+    </footer>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+
+</body>
+</html>
