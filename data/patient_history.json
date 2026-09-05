@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Chest Pain",
+    "text": "I have crushing chest pain that started 20 minutes ago. The pain is spreading to my left arm and jaw."
+  },
+  {
+    "name": "Abdominal Pain",
+    "text": "I have severe stomach pain since morning."
+  },
+  {
+    "name": "Breathing Emergency",
+    "text": "I can barely speak because I'm gasping for air. I can only say a few words at a time."
+  },
+  {
+    "name": "Injury",
+    "text": "I twisted my ankle and now I cannot put any weight on it."
+  }
+]
