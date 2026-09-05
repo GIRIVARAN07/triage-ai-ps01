@@ -1,0 +1,30 @@
+[
+  {
+    "id": "R01",
+    "name": "Chest Pain",
+    "condition": "Crushing chest pain or pain radiating to the left arm or jaw",
+    "urgency": "URGENT",
+    "department": "Cardiology"
+  },
+  {
+    "id": "R02",
+    "name": "Fever",
+    "condition": "Fever greater than 103°F or fever accompanied by a stiff neck",
+    "urgency": "URGENT",
+    "department": "General Medicine"
+  },
+  {
+    "id": "R03",
+    "name": "Injury",
+    "condition": "Inability to bear weight or visible deformity after an injury",
+    "urgency": "NON-URGENT",
+    "department": "Orthopedics"
+  },
+  {
+    "id": "R04",
+    "name": "Breathing",
+    "condition": "Short sentences, gasping, or inability to speak normally because of breathing difficulty",
+    "urgency": "EMERGENCY",
+    "department": "Respiratory"
+  }
+]
